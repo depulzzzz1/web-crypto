@@ -1,0 +1,64 @@
+
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Extended user information and settings.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "totalBalance": { "type": "number" },
+        "currency": { "type": "string", "enum": ["USD", "EUR", "BTC"] },
+        "isVerified": { "type": "boolean" },
+        "darkMode": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Asset": {
+      "title": "Asset",
+      "description": "Cryptocurrency holding in user portfolio.",
+      "type": "object",
+      "properties": {
+        "symbol": { "type": "string" },
+        "name": { "type": "string" },
+        "balance": { "type": "number" },
+        "avgBuyPrice": { "type": "number" },
+        "network": { "type": "string" }
+      }
+    },
+    "Transaction": {
+      "title": "Transaction",
+      "description": "Record of a trade or transfer.",
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["buy", "sell", "deposit", "withdraw", "transfer"] },
+        "asset": { "type": "string" },
+        "amount": { "type": "number" },
+        "price": { "type": "number" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "status": { "type": "string", "enum": ["pending", "completed", "failed"] }
+      }
+    }
+  },
+  "auth": {
+    "providers": ["email", "google", "apple"]
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User account and profile settings"
+    },
+    "/users/{userId}/assets/{assetId}": {
+      "schema": "Asset",
+      "description": "Portfolio holdings"
+    },
+    "/users/{userId}/transactions/{transactionId}": {
+      "schema": "Transaction",
+      "description": "Historical activity"
+    }
+  }
+}

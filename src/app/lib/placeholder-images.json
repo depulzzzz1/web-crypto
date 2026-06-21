@@ -1,0 +1,41 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Futuristic abstract digital background",
+      "imageUrl": "https://picsum.photos/seed/cryptobg/1920/1080",
+      "imageHint": "futuristic digital technology"
+    },
+    {
+      "id": "nft-1",
+      "description": "Cyberpunk digital art NFT",
+      "imageUrl": "https://picsum.photos/seed/nft1/400/400",
+      "imageHint": "cyberpunk art"
+    },
+    {
+      "id": "nft-2",
+      "description": "Abstract cosmic NFT",
+      "imageUrl": "https://picsum.photos/seed/nft2/400/400",
+      "imageHint": "abstract cosmic"
+    },
+    {
+      "id": "nft-3",
+      "description": "Futuristic robot portrait NFT",
+      "imageUrl": "https://picsum.photos/seed/nft3/400/400",
+      "imageHint": "futuristic robot"
+    },
+    {
+      "id": "avatar-1",
+      "description": "Professional trader avatar",
+      "imageUrl": "https://picsum.photos/seed/trader1/100/100",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "avatar-2",
+      "description": "Venture capitalist avatar",
+      "imageUrl": "https://picsum.photos/seed/trader2/100/100",
+      "imageHint": "woman portrait"
+    }
+  ]
+}
